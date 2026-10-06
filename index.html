@@ -3,9 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Habit Tracker Test</h1>
+  <h1>Habit Tracker</h1>
+
+  <form id="habit-form">
+    <input type="text" id="habit-name-input" placeholder="Habit name (e.g., Read 10 pages)" required />
+  
+    <select id="habit-category-select">
+      <option value="Healthy">Healthy</option>
+      <option value="Productivity">Productivity</option>
+      <option value="Personal">Personal</option>
+      <option value="Finance">Finance</option>
+    </select>
+
+    <button type="submit">Add Habit</button>
+  </form>
+
+  <!-- Category Filter Control -->
+  <div id="filter-container" style="margin: 20px 0;">
+    <label for="category-filter">Filter by Category: </label>
+    <select id="category-filter">
+      <option value="All">All Categories</option>
+      <option value="Healthy">Healthy</option>
+      <option value="Productivity">Productivity</option>
+      <option value="Personal">Personal</option>
+      <option value="Finance">Finance</option>
+  </select>
+  </div>
+
+  <!-- Container to dynamically display habits -->
+  <div id = "habit-list"></div>
+
   <script src="script.js"></script>
 </body>
 </html>
