@@ -105,7 +105,6 @@ button:hover {
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  max-width: 480px;
   margin-top: 8px;
 }
 
@@ -170,4 +169,53 @@ button:hover {
 
 .delete-btn:hover {
   background-color: #fee2e2;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Mobile Phones (< 520px) */
+@media (max-width: 520px) {
+  body {
+    padding: 16px 8px; /* Reduced side padding so content spans closer to edges */
+  }
+
+  #habit-form,
+  #filter-container,
+  #habit-list {
+    width: 100%;
+    max-width: 100%; /* Allows containers to span full mobile width */
+  }
+
+  .habit-card {
+    width: 100%; /* Ensures habit cards stretch edge-to-edge inside habit-list */
+    border-radius: 10px; /* Optional slight reduction in border radius for tight screens */
+  }
+
+  #habit-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  #filter-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 14px 16px;
+  }
+
+  button {
+    width: 100%; /* Full-width touch targets on mobile */
+  }
+}
+
+/* Desktop & Larger Screens (> 768px) */
+@media (min-width: 768px) {
+  #filter-container,
+  #habit-list {
+    max-width: 560px; /* Slightly wider cards for cleaner desktop view */
+  }
 }
